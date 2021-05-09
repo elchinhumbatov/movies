@@ -1,0 +1,16 @@
+<div class="bottom_info">
+  <div class="details">
+    <p>Rate: {{ score }}</p>
+    <p>Year {{ date }}</p>
+  </div>
+  <div class="progress">
+    <div class="rate" 
+      [ngStyle]="{'width': score +'%'}"
+      [ngClass]="{
+        green: +score >=80,
+        yellow: +score >40 && +score <80,
+        red: +score <=40
+      }"
+    ></div>
+  </div>
+</div>

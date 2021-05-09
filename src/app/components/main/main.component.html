@@ -12,26 +12,15 @@
               <p>Directored by</p>
               <p><strong>{{ movie.director }}</strong></p>
             </div>
-            <div class="bottom_info">
-              <div class="details">
-                <p>Rate: {{ movie.rt_score }}</p>
-                <p>Year {{ movie.release_date }}</p>
-              </div>
-              <div class="progress">
-                <div class="rate" 
-                  [ngStyle]="{'width': movie.rt_score +'%'}"
-                  [ngClass]="{
-                    green: movie.rt_score>=80,
-                    yellow: movie.rt_score>40 && movie.rt_score<80,
-                    red: movie.rt_score<=40
-                  }"
-                ></div>
-              </div>
-            </div>
+            <app-bottom-info [score]='movie.rt_score' [date]='movie.release_date'></app-bottom-info>
           </div>
         </div>
         <div class="movie_title">
           <h3>{{ movie.title }}</h3>
+        </div>
+        <div class="movie_details_mob">
+          <p>{{ movie.director }} film.</p>
+          <app-bottom-info [score]='movie.rt_score' [date]='movie.release_date'></app-bottom-info>
         </div>
       </div>
     </div>

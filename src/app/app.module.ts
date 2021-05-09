@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
+import { BottomInfoComponent } from './components/main/bottom-info/bottom-info.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { LoaderComponent } from './components/common/loader/loader.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
@@ -20,7 +21,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     FooterComponent,
     MainComponent,
     MovieComponent,
-    LoaderComponent
+    LoaderComponent,
+    BottomInfoComponent
   ],
   imports: [
     BrowserModule,

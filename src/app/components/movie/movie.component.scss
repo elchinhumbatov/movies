@@ -10,7 +10,7 @@
   #movie_info_left {
     width: 25%;
     cursor: zoom-in;
-    @media (max-width: 600px) { width: 100%; }
+    @media (max-width: 600px) { width: 100%; cursor: auto; }
     img {
       width: 100%;
       object-fit: cover;

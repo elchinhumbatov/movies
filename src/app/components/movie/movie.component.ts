@@ -33,6 +33,9 @@ export class MovieComponent implements OnInit {
     });
   }
   toggleOverlay(styleClass): void {
-    this.overlayClass = styleClass;
+    if (window.innerWidth >= 600) {
+      this.overlayClass = styleClass;
+    }
+    return;
   }
 }
