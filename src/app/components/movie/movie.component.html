@@ -1,0 +1,25 @@
+<section id="movie_page">
+  <div class="container">
+    <div id="movie">
+      <div id="movie_info_left">
+        <img (click)="toggleOverlay('show_overlay')" src="./assets/img/poster.jpg" alt="Poster">
+      </div>
+      <div id="movie_info_rigth">
+        <div id="main_info">
+          <h1>{{ (movie.title || 'Loading title...') + ' (' + (movie.original_title || '...') + ')' }}</h1>
+          <h3>Directered by <strong>{{ movie.director || 'Loading...' }}</strong></h3>
+          <h4>Producer <strong>{{ movie.producer || 'Loading...' }}</strong></h4>
+          <p>{{ movie.description }}</p>
+        </div>
+        <div id="add_info">
+          <p>Rate: {{movie.rt_score || '...' }}</p>
+          <p>Year of Production: {{movie.release_date || '...' }}</p>
+          <p>Runtime: {{movie.running_time || '...' }}min.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div (click)="toggleOverlay('hidden_overlay')" [ngClass]='overlayClass' class="overlay">
+    <img src="./assets/img/poster.jpg" alt="Poster">
+  </div>
+</section>
